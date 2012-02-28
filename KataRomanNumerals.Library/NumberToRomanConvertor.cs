@@ -11,14 +11,15 @@ namespace KataRomanNumerals.Library
         {
             get
             {
-                var stepsArray = new[]{
+                var stepsArray = new[]
+                {
                     new Step() { Value = 1, Symbol = 'I',Level=1, CanSubtract = true },
-                new Step() { Value = 5,Level=2, Symbol = 'V'},
-                new Step(){Value = 10,Level=3,Symbol='X',CanSubtract=true},
-                new Step(){Value=50,Level=4,Symbol='L'},
-                new Step(){Value = 100,Level=5,Symbol='C',CanSubtract=true},
-                new Step(){Value=500,Level=6,Symbol='D'},
-                new Step(){Value = 1000,Level=7,Symbol='M',CanSubtract=true},
+                    new Step() { Value = 5,Level=2, Symbol = 'V'},
+                    new Step(){Value = 10,Level=3,Symbol='X',CanSubtract=true},
+                    new Step(){Value=50,Level=4,Symbol='L'},
+                    new Step(){Value = 100,Level=5,Symbol='C',CanSubtract=true},
+                    new Step(){Value=500,Level=6,Symbol='D'},
+                    new Step(){Value = 1000,Level=7,Symbol='M',CanSubtract=true},
                 };
                 return stepsArray.OrderByDescending(s => s.Level);
             }
@@ -32,13 +33,13 @@ namespace KataRomanNumerals.Library
 
                 var remainder = number % step.Value;
                 int quotient = number / step.Value;
-                if (IsInvalidStep(step,remainder))
+                if (IsInvalidStep(step, remainder))
                     continue;
                 string romanValue = accumulatedString;
                 //if the number is less than the step value but it is not a step itself
                 if (quotient == 0 && !Steps.Select(s => s.Value).Contains(remainder))
                 {
-                    var subtractables = Steps.Where(s => IsSubtractableForLevel(s,step.Level));
+                    var subtractables = Steps.Where(s => IsSubtractableForLevel(s, step.Level));
                     if (subtractables.Any())
                     {
                         var firstSubtractor = subtractables.First();
@@ -62,7 +63,6 @@ namespace KataRomanNumerals.Library
                     else
                         romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level && s.CanSubtract).Symbol;
                 }
-
 
                 if (remainder == 0)
                     return romanValue;
