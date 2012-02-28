@@ -51,5 +51,10 @@ namespace KataRomanNumerals.Test
         {
             Assert.AreEqual("XXX", Convertor.GetRomanValue(30));
         }
+        [TestMethod]
+        public void NumberToRomanConvertor_Returns_XLIX_For_49()
+        {
+            Assert.AreEqual("XLIX", Convertor.GetRomanValue(49));
+        }
     }
 }

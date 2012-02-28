@@ -14,7 +14,8 @@ namespace KataRomanNumerals.Library
                 var stepsArray = new[]{
                     new Step() { Value = 1, Symbol = 'I',Level=1, CanSubtract = true },
                 new Step() { Value = 5,Level=2, Symbol = 'V'},
-                new Step(){Value = 10,Level=3,Symbol='X',CanSubtract=true}
+                new Step(){Value = 10,Level=3,Symbol='X',CanSubtract=true},
+                new Step(){Value=50,Level=4,Symbol='L'}
                 };
                 return stepsArray.OrderByDescending(s => s.Level);
             }
@@ -27,17 +28,25 @@ namespace KataRomanNumerals.Library
             {
                 var remainder = number % step.Value;
                 int quotient = number / step.Value;
+
                 string romanValue = accumulatedString;
-                if (quotient == 0 && !Steps.Select(s=>s.Value).Contains(remainder))
+                if (quotient == 0 &&  !Steps.Select(s=>s.Value).Contains(remainder))
                 {
-                    var subtractables = Steps.Where(s => s.Value == step.Value - remainder);
-                    if (subtractables.Any() && (subtractables.First().Value + remainder) == step.Value)
-                        return subtractables.First().Symbol.ToString() + step.Symbol.ToString();
-                }
+                    var subtractables = Steps.Where(s => s.CanSubtract && s.Level < step.Level );
+                    if(subtractables.Any() ){
+                        var firstSubtractor=subtractables.First();
+                        if ((firstSubtractor.Value + remainder) == step.Value)
+                            return accumulatedString+ firstSubtractor.Symbol.ToString() + step.Symbol.ToString();
+                        else if (firstSubtractor.Value * quotient < number)
+                        {
+                            
+                            return GetRomanValue(number - (step.Value- firstSubtractor.Value), step.Level, firstSubtractor.Symbol.ToString() + step.Symbol.ToString());
+                        }
+                }}
                 if (quotient <= 3)
                     romanValue += new string(step.Symbol, quotient);
-                else if (step.CanSubtract)
-                    romanValue = step.Symbol.ToString() + Steps.Reverse().SkipWhile(s => s.Value <= step.Value).FirstOrDefault().Symbol;
+                //else if (step.CanSubtract)
+                //    romanValue = step.Symbol.ToString() + Steps.Reverse().SkipWhile(s => s.Value <= step.Value).FirstOrDefault().Symbol;
                 else
                     romanValue = Steps.FirstOrDefault(s => s.Value < step.Value).Symbol.ToString() + romanValue;
                 if (remainder == 0)
