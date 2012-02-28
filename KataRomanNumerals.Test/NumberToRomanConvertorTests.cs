@@ -32,5 +32,11 @@ namespace KataRomanNumerals.Test
             Assert.AreEqual("VI", convertor.GetRomanValue(6));
             Assert.AreEqual("VIII", convertor.GetRomanValue(8));
         }
+        [TestMethod]
+        public void NumberToRomanConvertor_Returns_IV_For_4()
+        {
+            var convertor = new NumberToRomanConvertor();
+            Assert.AreEqual("IV", convertor.GetRomanValue(4));
+        }
     }
 }

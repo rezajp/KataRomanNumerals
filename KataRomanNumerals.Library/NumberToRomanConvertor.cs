@@ -7,29 +7,38 @@ namespace KataRomanNumerals.Library
 {
     public class NumberToRomanConvertor
     {
-        public IEnumerable<Step> Steps
+        public IOrderedEnumerable<Step> Steps
         {
             get
             {
-                yield return new Step() { Value = 1, Symbol = 'I', CanSubtract = true };
-                yield return new Step() { Value = 5, Symbol = 'V', CanSubtract = false };
+                var stepsArray = new[]{
+                    new Step() { Value = 1, Symbol = 'I', CanSubtract = true },
+                new Step() { Value = 5, Symbol = 'V', CanSubtract = false }
+                };
+                return stepsArray.OrderByDescending(s => s.Value);
             }
         }
-
-        public string GetRomanValue(int number,string accumulatedString="")
+        public string GetRomanValue(int number, string accumulatedString = "")
         {
             CheckForNegativeValues(number);
-            
-            foreach (var step in Steps.Where(s=> number>=s.Value).OrderByDescending(s=>s.Value))
+
+            foreach (var step in Steps.Where(s => number >= s.Value))
             {
                 var remainder = number % step.Value;
-                var romanValue=accumulatedString + new string(step.Symbol, number / step.Value);
+                int quotient = number / step.Value;
+                string romanValue = accumulatedString;
+                if (quotient <= 3)
+                    romanValue += new string(step.Symbol, quotient);
+                else if (step.CanSubtract)
+                    romanValue = step.Symbol.ToString() + Steps.Reverse().SkipWhile(s => s.Value <= step.Value).FirstOrDefault().Symbol;
+                else
+                    romanValue = Steps.FirstOrDefault(s => s.Value < step.Value).Symbol.ToString() + romanValue;
                 if (remainder == 0)
                     return romanValue;
-                
+
                 return GetRomanValue(remainder, romanValue);
             }
-            
+
             throw new NotSupportedException();
         }
 
