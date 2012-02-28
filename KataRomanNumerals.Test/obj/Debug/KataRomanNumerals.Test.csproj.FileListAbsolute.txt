@@ -1,0 +1,7 @@
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\obj\Debug\ResolveAssemblyReference.cache
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\bin\Debug\KataRomanNumerals.Test.dll
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\bin\Debug\KataRomanNumerals.Test.pdb
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\bin\Debug\KataRomanNumerals.Library.dll
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\bin\Debug\KataRomanNumerals.Library.pdb
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\obj\Debug\KataRomanNumerals.Test.dll
+c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Test\obj\Debug\KataRomanNumerals.Test.pdb

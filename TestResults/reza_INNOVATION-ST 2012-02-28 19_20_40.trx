@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="9d671ca0-7439-4cc6-ac0b-860e5baa4735" name="reza@INNOVATION-ST 2012-02-28 19:20:40" runUser="Innovation-St\reza" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6e919be3-b349-4f4d-a205-06b636a09382">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="reza_INNOVATION-ST 2012-02-28 19_20_40">
+      <DeploymentItem filename="c:\users\reza\documents\visual studio 2010\Projects\KataRomanNumerals\KataRomanNumerals.Library\bin\Debug\KataRomanNumerals.Library.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-02-28T19:20:40.1967890+00:00" queuing="2012-02-28T19:20:41.0958404+00:00" start="2012-02-28T19:20:41.1748450+00:00" finish="2012-02-28T19:20:41.8068811+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="NumberToRomanConvertor_Returns_I_For_1" storage="c:\users\reza\documents\visual studio 2010\projects\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="32ce1458-f01a-4f85-a068-f8c725fd52ab">
+      <Execution id="8ecf17d0-aef1-424c-ba29-244045260f0c" />
+      <TestMethod codeBase="c:/users/reza/documents/visual studio 2010/Projects/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_I_For_1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="32ce1458-f01a-4f85-a068-f8c725fd52ab" executionId="8ecf17d0-aef1-424c-ba29-244045260f0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8ecf17d0-aef1-424c-ba29-244045260f0c" testId="32ce1458-f01a-4f85-a068-f8c725fd52ab" testName="NumberToRomanConvertor_Returns_I_For_1" computerName="INNOVATION-ST" duration="00:00:00.0245069" startTime="2012-02-28T19:20:41.1968462+00:00" endTime="2012-02-28T19:20:41.7518780+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ecf17d0-aef1-424c-ba29-244045260f0c">
+    </UnitTestResult>
+  </Results>
+</TestRun>
