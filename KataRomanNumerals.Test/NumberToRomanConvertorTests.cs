@@ -10,33 +10,41 @@ namespace KataRomanNumerals.Test
     [TestClass]
     public class NumberToRomanConvertorTests
     {
+        NumberToRomanConvertor Convertor;
+        [TestInitialize]
+        public void Initialize()
+        {
+            Convertor = new NumberToRomanConvertor();
+        }
+
         [TestMethod]
         public void NumberToRomanConvertor_Returns_I_For_1()
         {
-            var convertor = new NumberToRomanConvertor();
-            string result = convertor.GetRomanValue(1);
+            string result = Convertor.GetRomanValue(1);
             Assert.AreEqual("I", result);
         }
         [TestMethod]
         public void NumberToRomanConvertor_Returns_Correct_Value_For_Numbers_Lower_Than_3()
         {
-            var convertor = new NumberToRomanConvertor();
-            Assert.AreEqual("II", convertor.GetRomanValue(2));
-            Assert.AreEqual("II", convertor.GetRomanValue(2));
+            Assert.AreEqual("II", Convertor.GetRomanValue(2));
+            Assert.AreEqual("II", Convertor.GetRomanValue(2));
         }
         [TestMethod]
         public void NumberToRomanConvertor_Handles_Normally_Calculated_Numbers_Up_To_8()
         {
-            var convertor = new NumberToRomanConvertor();
-            Assert.AreEqual("V", convertor.GetRomanValue(5));
-            Assert.AreEqual("VI", convertor.GetRomanValue(6));
-            Assert.AreEqual("VIII", convertor.GetRomanValue(8));
+            Assert.AreEqual("V", Convertor.GetRomanValue(5));
+            Assert.AreEqual("VI", Convertor.GetRomanValue(6));
+            Assert.AreEqual("VIII", Convertor.GetRomanValue(8));
         }
         [TestMethod]
         public void NumberToRomanConvertor_Returns_IV_For_4()
         {
-            var convertor = new NumberToRomanConvertor();
-            Assert.AreEqual("IV", convertor.GetRomanValue(4));
+            Assert.AreEqual("IV", Convertor.GetRomanValue(4));
+        }
+        [TestMethod]
+        public void NumberToRomanConvertor_Returns_IX_For_9()
+        {
+            Assert.AreEqual("IX", Convertor.GetRomanValue(9));
         }
     }
 }

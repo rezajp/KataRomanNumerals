@@ -12,5 +12,7 @@ namespace KataRomanNumerals.Library
         public char Symbol { get; set; }
 
         public bool CanSubtract { get; set; }
+
+        public int Level { get; set; }
     }
 }
