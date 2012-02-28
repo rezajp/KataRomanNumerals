@@ -24,5 +24,13 @@ namespace KataRomanNumerals.Test
             Assert.AreEqual("II", convertor.GetRomanValue(2));
             Assert.AreEqual("II", convertor.GetRomanValue(2));
         }
+        [TestMethod]
+        public void NumberToRomanConvertor_Handles_Normally_Calculated_Numbers_Up_To_8()
+        {
+            var convertor = new NumberToRomanConvertor();
+            Assert.AreEqual("V", convertor.GetRomanValue(5));
+            Assert.AreEqual("VI", convertor.GetRomanValue(6));
+            Assert.AreEqual("VIII", convertor.GetRomanValue(8));
+        }
     }
 }
