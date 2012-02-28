@@ -37,7 +37,7 @@ namespace KataRomanNumerals.Library
                         var firstSubtractor=subtractables.First();
                         if ((firstSubtractor.Value + remainder) == step.Value)
                             return accumulatedString+ firstSubtractor.Symbol.ToString() + step.Symbol.ToString();
-                        else if (firstSubtractor.Value * quotient < number)
+                        else if ((step.Value - firstSubtractor.Value) < number)
                         {
                             
                             return GetRomanValue(number - (step.Value- firstSubtractor.Value), step.Level, firstSubtractor.Symbol.ToString() + step.Symbol.ToString());
