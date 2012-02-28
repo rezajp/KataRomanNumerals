@@ -28,9 +28,9 @@ namespace KataRomanNumerals.Library
                 var remainder = number % step.Value;
                 int quotient = number / step.Value;
                 string romanValue = accumulatedString;
-                if (quotient == 0)
+                if (quotient == 0 && !Steps.Select(s=>s.Value).Contains(remainder))
                 {
-                    var subtractables = Steps.Where(s => s.Value == step.Value-remainder);
+                    var subtractables = Steps.Where(s => s.Value == step.Value - remainder);
                     if (subtractables.Any() && (subtractables.First().Value + remainder) == step.Value)
                         return subtractables.First().Symbol.ToString() + step.Symbol.ToString();
                 }
@@ -43,7 +43,7 @@ namespace KataRomanNumerals.Library
                 if (remainder == 0)
                     return romanValue;
 
-                return GetRomanValue(remainder,step.Level, romanValue);
+                return GetRomanValue(remainder, step.Level, romanValue);
             }
 
             throw new NotSupportedException();
