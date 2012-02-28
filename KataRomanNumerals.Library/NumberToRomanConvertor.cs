@@ -15,7 +15,10 @@ namespace KataRomanNumerals.Library
                     new Step() { Value = 1, Symbol = 'I',Level=1, CanSubtract = true },
                 new Step() { Value = 5,Level=2, Symbol = 'V'},
                 new Step(){Value = 10,Level=3,Symbol='X',CanSubtract=true},
-                new Step(){Value=50,Level=4,Symbol='L'}
+                new Step(){Value=50,Level=4,Symbol='L'},
+                new Step(){Value = 100,Level=5,Symbol='C',CanSubtract=true},
+                new Step(){Value=500,Level=6,Symbol='D'},
+                new Step(){Value = 1000,Level=7,Symbol='M',CanSubtract=true},
                 };
                 return stepsArray.OrderByDescending(s => s.Level);
             }
@@ -23,12 +26,14 @@ namespace KataRomanNumerals.Library
         public string GetRomanValue(int number, int startingLevel = 0, string accumulatedString = "")
         {
             CheckForNegativeValues(number);
-            var usingSteps = startingLevel == 0 ? Steps : Steps.Where(s => s.Level < startingLevel);
+            var usingSteps = startingLevel == 0 ? Steps : Steps.Where(s => s.Level < startingLevel);//.SkipWhile(s=>!s.CanSubtract);
             foreach (var step in usingSteps)
             {
+                
                 var remainder = number % step.Value;
                 int quotient = number / step.Value;
-
+                if(!step.CanSubtract && remainder>3)
+                    continue;
                 string romanValue = accumulatedString;
                 if (quotient == 0 &&  !Steps.Select(s=>s.Value).Contains(remainder))
                 {
@@ -45,10 +50,17 @@ namespace KataRomanNumerals.Library
                 }}
                 if (quotient <= 3)
                     romanValue += new string(step.Symbol, quotient);
-                //else if (step.CanSubtract)
-                //    romanValue = step.Symbol.ToString() + Steps.Reverse().SkipWhile(s => s.Value <= step.Value).FirstOrDefault().Symbol;
-                else
+                else if (!step.CanSubtract)
                     romanValue = Steps.FirstOrDefault(s => s.Value < step.Value).Symbol.ToString() + romanValue;
+                else 
+                {
+                    if (quotient == 4)
+                        romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level).Symbol;
+                    else
+                        romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level && s.CanSubtract).Symbol;
+                }
+
+                
                 if (remainder == 0)
                     return romanValue;
 

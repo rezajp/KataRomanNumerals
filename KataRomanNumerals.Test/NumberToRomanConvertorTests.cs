@@ -56,5 +56,10 @@ namespace KataRomanNumerals.Test
         {
             Assert.AreEqual("XLIX", Convertor.GetRomanValue(49));
         }
+        [TestMethod]
+        public void NumberToRomanConvertor_Returns_MCMXCIX_For_1999()
+        {
+            Assert.AreEqual("MCMXCIX", Convertor.GetRomanValue(1999));
+        }
     }
 }
