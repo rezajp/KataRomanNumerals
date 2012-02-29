@@ -52,17 +52,7 @@ namespace KataRomanNumerals.Library
                         }
                     }
                 }
-                if (quotient <= 3)
-                    romanValue += new string(step.Symbol, quotient);
-                else if (!step.CanSubtract)
-                    romanValue = Steps.FirstOrDefault(s => s.Value < step.Value).Symbol.ToString() + romanValue;
-                else
-                {
-                    if (quotient == 4)
-                        romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level).Symbol;
-                    else
-                        romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level && s.CanSubtract).Symbol;
-                }
+                romanValue = GetRomanValueForBiggerNumbers(romanValue,quotient,step,accumulatedString);
 
                 if (remainder == 0)
                     return romanValue;
@@ -71,6 +61,22 @@ namespace KataRomanNumerals.Library
             }
 
             throw new NotSupportedException();
+        }
+
+        private string GetRomanValueForBiggerNumbers(string romanValue,int quotient,Step step,string accumulatedString)
+        {
+            if (quotient <= 3)
+                romanValue += new string(step.Symbol, quotient);
+            else if (!step.CanSubtract)
+                romanValue = Steps.FirstOrDefault(s => s.Value < step.Value).Symbol.ToString() + romanValue;
+            else
+            {
+                if (quotient == 4)
+                    romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level).Symbol;
+                else
+                    romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level && s.CanSubtract).Symbol;
+            }
+            return romanValue;
         }
 
         private bool IsInvalidStep(Step step, int remainder)
