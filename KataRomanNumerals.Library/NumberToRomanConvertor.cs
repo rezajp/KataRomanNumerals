@@ -39,18 +39,9 @@ namespace KataRomanNumerals.Library
                 //if the number is less than the step value but it is not a step itself
                 if (quotient == 0 && !Steps.Select(s => s.Value).Contains(remainder))
                 {
-                    var subtractables = Steps.Where(s => IsSubtractableForLevel(s, step.Level));
-                    if (subtractables.Any())
-                    {
-                        var firstSubtractor = subtractables.First();
-                        if ((firstSubtractor.Value + remainder) == step.Value)
-                            return accumulatedString + firstSubtractor.Symbol.ToString() + step.Symbol.ToString();
-                        else if ((step.Value - firstSubtractor.Value) < number)
-                        {
-
-                            return GetRomanValue(number - (step.Value - firstSubtractor.Value), step.Level, firstSubtractor.Symbol.ToString() + step.Symbol.ToString());
-                        }
-                    }
+                    var value= GetRomanValueForSmallerNumbers(number, accumulatedString, step, remainder);
+                    if (!String.IsNullOrEmpty(value))
+                        return value;
                 }
                 romanValue = GetRomanValueForBiggerNumbers(romanValue,quotient,step,accumulatedString);
 
@@ -61,6 +52,23 @@ namespace KataRomanNumerals.Library
             }
 
             throw new NotSupportedException();
+        }
+
+        private string GetRomanValueForSmallerNumbers(int number, string accumulatedString, Step step, int remainder)
+        {
+            var subtractables = Steps.Where(s => IsSubtractableForLevel(s, step.Level));
+            if (subtractables.Any())
+            {
+                var firstSubtractor = subtractables.First();
+                if ((firstSubtractor.Value + remainder) == step.Value)
+                    return accumulatedString + firstSubtractor.Symbol.ToString() + step.Symbol.ToString();
+                else if ((step.Value - firstSubtractor.Value) < number)
+                {
+
+                    return GetRomanValue(number - (step.Value - firstSubtractor.Value), step.Level, firstSubtractor.Symbol.ToString() + step.Symbol.ToString());
+                }
+            }
+            return "";
         }
 
         private string GetRomanValueForBiggerNumbers(string romanValue,int quotient,Step step,string accumulatedString)
