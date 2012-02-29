@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="26FA71F2-64C9-4C27-971E-EDA5255B6DB1" ModuleId="KataRomanNumerals.Library" />
+  <Module PersistentId="34FF8908-7443-4A53-B930-8A817AE80526" ModuleId="KataRomanNumerals.Test" />
+</Modules>

@@ -14,7 +14,8 @@ namespace KataRomanNumerals.Test
         [TestInitialize]
         public void Initialize()
         {
-            Convertor = new NumberToRomanConvertor();
+            var stepGenerator = new StepsGenerator();
+            Convertor = new NumberToRomanConvertor(stepGenerator);
         }
 
         [TestMethod]
@@ -66,5 +67,12 @@ namespace KataRomanNumerals.Test
         {
             Assert.AreEqual("XCIX", Convertor.GetRomanValue(99));
         }
+       
+        //[TestMethod]
+        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
+        //public void NumberToRomanConvertor_ThrowsExeptionFor_4000()
+        //{
+        //    Convertor.GetRomanValue(4000);
+        //}
     }
 }

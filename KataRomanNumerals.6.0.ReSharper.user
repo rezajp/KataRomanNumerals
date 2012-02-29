@@ -1,0 +1,105 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="906" fromTop="0" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="1898" fromTop="48" />
+      <File id="34FF8908-7443-4A53-B930-8A817AE80526/f:NumberToRomanConvertorTests.cs" caret="2634" fromTop="75" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="204" fromTop="9" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="1117" fromTop="27" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="1275" fromTop="20" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="1601" fromTop="30" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="2175" fromTop="5" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="2466" fromTop="10" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="3113" fromTop="24" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="1875" fromTop="24" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="2128" fromTop="31" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="3614" fromTop="30" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="3473" fromTop="30" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="2512" fromTop="32" />
+      <File id="34FF8908-7443-4A53-B930-8A817AE80526/f:NumberToRomanConvertorTests.cs" caret="519" fromTop="17" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="3699" fromTop="5" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="563" fromTop="10" />
+      <File id="34FF8908-7443-4A53-B930-8A817AE80526/f:NumberToRomanConvertorTests.cs" caret="2634" fromTop="25" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="180" fromTop="8" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="180" fromTop="3" />
+      <File id="34FF8908-7443-4A53-B930-8A817AE80526/f:NumberToRomanConvertorTests.cs" caret="2392" fromTop="14" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="2535" fromTop="14" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="180" fromTop="3" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:StepsGenerator.cs" caret="906" fromTop="18" />
+      <File id="26FA71F2-64C9-4C27-971E-EDA5255B6DB1/f:NumberToRomanConvertor.cs" caret="1898" fromTop="18" />
+      <File id="34FF8908-7443-4A53-B930-8A817AE80526/f:NumberToRomanConvertorTests.cs" caret="2435" fromTop="21" />
+      <File id="34FF8908-7443-4A53-B930-8A817AE80526/f:NumberToRomanConvertorTests.cs" caret="2634" fromTop="26" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="public" priority="191" />
+      <Item value="NumberToRomanConvertor`0" priority="31" />
+      <Item value="stepsGenerator" priority="92" />
+      <Item value="private" priority="95" />
+      <Item value="_stepsGenerator" priority="223" />
+      <Item value="startingLevel" priority="31" />
+      <Item value="remainder" priority="31" />
+      <Item value="IEnumerable" priority="31" />
+      <Item value="Step`0" priority="31" />
+      <Item value="IsSubtractableForLevel`0" priority="31" />
+      <Item value="level" priority="31" />
+      <Item value="step" priority="63" />
+      <Item value="var" priority="127" />
+      <Item value="if" priority="191" />
+      <Item value="nextSmallerStep" priority="63" />
+      <Item value="null" priority="95" />
+      <Item value="return" priority="127" />
+      <Item value="lastLevelStep" priority="63" />
+      <Item value="lastSubtractableLevelStep" priority="63" />
+      <Item value="new" priority="63" />
+      <Item value="StepsGenerator" priority="58" />
+      <Item value="stepGenerator" priority="31" />
+      <Item value="CheckForNegativeValues`0" priority="31" />
+      <Item value="number" priority="95" />
+      <Item value="ExpectedException" priority="31" />
+      <Item value="ArgumentOutOfRangeException`0" priority="63" />
+      <Item value="int" priority="63" />
+      <Item value="StepsGenerator`0" priority="63" />
+      <Item value="maximumStep" priority="63" />
+      <Item value="_maximumStepValue" priority="95" />
+      <Item value="maximumStepValue" priority="31" />
+      <Item value="Where`1" priority="26" />
+      <Item value="s" priority="63" />
+      <Item value="throw" priority="31" />
+      <Item value="Steps" priority="63" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:KataRomanNumerals.Library.Step">
+      <Item value="Level" priority="26" />
+      <Item value="Value" priority="53" />
+      <Item value="CanSubtract" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="ToString`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Max`1" priority="26" />
+      <Item value="FirstOrDefault`1" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

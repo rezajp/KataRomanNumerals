@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e279a10e-0d6d-4faa-a3ce-fecf20364413" name="panahr@QHSW20363 2012-02-29 10:39:27" runUser="B2B\panahr" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="6e919be3-b349-4f4d-a205-06b636a09382">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="panahr_QHSW20363 2012-02-29 10_39_27">
+      <DeploymentItem filename="C:\KataRomanNumerals\KataRomanNumerals\KataRomanNumerals.Library\bin\Debug\KataRomanNumerals.Library.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-02-29T10:39:27.1097529+00:00" queuing="2012-02-29T10:39:33.4963915+00:00" start="2012-02-29T10:39:33.6564075+00:00" finish="2012-02-29T10:39:34.7795198+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="9" executed="9" passed="9" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="NumberToRomanConvertor_Returns_IV_For_4" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="79ea984a-0e3a-0859-5266-9264b8474cf3">
+      <Execution id="6eff85fc-b702-42a6-80c4-385978375989" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_IV_For_4" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_XLIX_For_49" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="50a9aee8-397e-35c2-732d-07cdb9b985e9">
+      <Execution id="9692cc53-3d51-4c4e-af15-53ec29fe2666" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_XLIX_For_49" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_MCMXCIX_For_1999" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="ff27711d-6319-d11b-1c21-a93d513815ca">
+      <Execution id="5c4defcd-e63d-4065-9257-66d463bcd6e9" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_MCMXCIX_For_1999" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Handles_Normally_Calculated_Numbers_Up_To_8" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="a5c7d76b-e83a-db86-0d3a-5862beff8f69">
+      <Execution id="b3251a9e-f3a5-4eec-b60d-071ebeab7580" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Handles_Normally_Calculated_Numbers_Up_To_8" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_XXX_For_30" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="197ff004-93dc-d336-6771-7a8aab33156b">
+      <Execution id="38451ae5-2293-4c24-998a-4b496a6ca260" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_XXX_For_30" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_XCIX_For_99" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="73893994-d9ec-76c5-9c00-1580adac6742">
+      <Execution id="990f54c0-742e-4f1c-87cc-56ba9e86a265" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_XCIX_For_99" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_IX_For_9" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="bac3ed0c-f1f7-8a74-ec74-2ba28ce9231f">
+      <Execution id="5d0304f3-bd2e-46b6-ba00-8a448349b899" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_IX_For_9" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_I_For_1" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="32ce1458-f01a-4f85-a068-f8c725fd52ab">
+      <Execution id="1f0e1008-ca7a-4f17-871f-54e11d53d4af" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_I_For_1" />
+    </UnitTest>
+    <UnitTest name="NumberToRomanConvertor_Returns_Correct_Value_For_Numbers_Lower_Than_3" storage="c:\kataromannumerals\kataromannumerals\kataromannumerals.test\bin\debug\kataromannumerals.test.dll" id="873b1e5d-5b44-6564-1a2d-1d3d99d11e05">
+      <Execution id="a3cd7577-6932-4ff1-9cd3-19f78650a338" />
+      <TestMethod codeBase="C:/KataRomanNumerals/KataRomanNumerals/KataRomanNumerals.Test/bin/Debug/KataRomanNumerals.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KataRomanNumerals.Test.NumberToRomanConvertorTests, KataRomanNumerals.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumberToRomanConvertor_Returns_Correct_Value_For_Numbers_Lower_Than_3" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="197ff004-93dc-d336-6771-7a8aab33156b" executionId="38451ae5-2293-4c24-998a-4b496a6ca260" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32ce1458-f01a-4f85-a068-f8c725fd52ab" executionId="1f0e1008-ca7a-4f17-871f-54e11d53d4af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50a9aee8-397e-35c2-732d-07cdb9b985e9" executionId="9692cc53-3d51-4c4e-af15-53ec29fe2666" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73893994-d9ec-76c5-9c00-1580adac6742" executionId="990f54c0-742e-4f1c-87cc-56ba9e86a265" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79ea984a-0e3a-0859-5266-9264b8474cf3" executionId="6eff85fc-b702-42a6-80c4-385978375989" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="873b1e5d-5b44-6564-1a2d-1d3d99d11e05" executionId="a3cd7577-6932-4ff1-9cd3-19f78650a338" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5c7d76b-e83a-db86-0d3a-5862beff8f69" executionId="b3251a9e-f3a5-4eec-b60d-071ebeab7580" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bac3ed0c-f1f7-8a74-ec74-2ba28ce9231f" executionId="5d0304f3-bd2e-46b6-ba00-8a448349b899" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff27711d-6319-d11b-1c21-a93d513815ca" executionId="5c4defcd-e63d-4065-9257-66d463bcd6e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="38451ae5-2293-4c24-998a-4b496a6ca260" testId="197ff004-93dc-d336-6771-7a8aab33156b" testName="NumberToRomanConvertor_Returns_XXX_For_30" computerName="QHSW20363" duration="00:00:00.0757361" startTime="2012-02-29T10:39:33.7814200+00:00" endTime="2012-02-29T10:39:34.1954614+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38451ae5-2293-4c24-998a-4b496a6ca260">
+    </UnitTestResult>
+    <UnitTestResult executionId="1f0e1008-ca7a-4f17-871f-54e11d53d4af" testId="32ce1458-f01a-4f85-a068-f8c725fd52ab" testName="NumberToRomanConvertor_Returns_I_For_1" computerName="QHSW20363" duration="00:00:00.0008619" startTime="2012-02-29T10:39:34.2374656+00:00" endTime="2012-02-29T10:39:34.2504669+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f0e1008-ca7a-4f17-871f-54e11d53d4af">
+    </UnitTestResult>
+    <UnitTestResult executionId="9692cc53-3d51-4c4e-af15-53ec29fe2666" testId="50a9aee8-397e-35c2-732d-07cdb9b985e9" testName="NumberToRomanConvertor_Returns_XLIX_For_49" computerName="QHSW20363" duration="00:00:00.0061059" startTime="2012-02-29T10:39:34.2934712+00:00" endTime="2012-02-29T10:39:34.3024721+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9692cc53-3d51-4c4e-af15-53ec29fe2666">
+    </UnitTestResult>
+    <UnitTestResult executionId="990f54c0-742e-4f1c-87cc-56ba9e86a265" testId="73893994-d9ec-76c5-9c00-1580adac6742" testName="NumberToRomanConvertor_Returns_XCIX_For_99" computerName="QHSW20363" duration="00:00:00.0052186" startTime="2012-02-29T10:39:34.4284847+00:00" endTime="2012-02-29T10:39:34.4504869+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="990f54c0-742e-4f1c-87cc-56ba9e86a265">
+    </UnitTestResult>
+    <UnitTestResult executionId="6eff85fc-b702-42a6-80c4-385978375989" testId="79ea984a-0e3a-0859-5266-9264b8474cf3" testName="NumberToRomanConvertor_Returns_IV_For_4" computerName="QHSW20363" duration="00:00:00.0003035" startTime="2012-02-29T10:39:34.4724891+00:00" endTime="2012-02-29T10:39:34.4774896+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6eff85fc-b702-42a6-80c4-385978375989">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3cd7577-6932-4ff1-9cd3-19f78650a338" testId="873b1e5d-5b44-6564-1a2d-1d3d99d11e05" testName="NumberToRomanConvertor_Returns_Correct_Value_For_Numbers_Lower_Than_3" computerName="QHSW20363" duration="00:00:00.0053603" startTime="2012-02-29T10:39:34.5514970+00:00" endTime="2012-02-29T10:39:34.5644983+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3cd7577-6932-4ff1-9cd3-19f78650a338">
+    </UnitTestResult>
+    <UnitTestResult executionId="b3251a9e-f3a5-4eec-b60d-071ebeab7580" testId="a5c7d76b-e83a-db86-0d3a-5862beff8f69" testName="NumberToRomanConvertor_Handles_Normally_Calculated_Numbers_Up_To_8" computerName="QHSW20363" duration="00:00:00.0011299" startTime="2012-02-29T10:39:34.5895008+00:00" endTime="2012-02-29T10:39:34.5935012+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3251a9e-f3a5-4eec-b60d-071ebeab7580">
+    </UnitTestResult>
+    <UnitTestResult executionId="5d0304f3-bd2e-46b6-ba00-8a448349b899" testId="bac3ed0c-f1f7-8a74-ec74-2ba28ce9231f" testName="NumberToRomanConvertor_Returns_IX_For_9" computerName="QHSW20363" duration="00:00:00.0008178" startTime="2012-02-29T10:39:34.6375056+00:00" endTime="2012-02-29T10:39:34.6495068+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d0304f3-bd2e-46b6-ba00-8a448349b899">
+    </UnitTestResult>
+    <UnitTestResult executionId="5c4defcd-e63d-4065-9257-66d463bcd6e9" testId="ff27711d-6319-d11b-1c21-a93d513815ca" testName="NumberToRomanConvertor_Returns_MCMXCIX_For_1999" computerName="QHSW20363" duration="00:00:00.0001988" startTime="2012-02-29T10:39:34.6605079+00:00" endTime="2012-02-29T10:39:34.6625081+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c4defcd-e63d-4065-9257-66d463bcd6e9">
+    </UnitTestResult>
+  </Results>
+</TestRun>

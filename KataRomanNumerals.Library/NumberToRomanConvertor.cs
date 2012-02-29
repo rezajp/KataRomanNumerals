@@ -7,28 +7,17 @@ namespace KataRomanNumerals.Library
 {
     public class NumberToRomanConvertor
     {
-        public IOrderedEnumerable<Step> Steps
+        private StepsGenerator _stepsGenerator;
+        public NumberToRomanConvertor(StepsGenerator stepsGenerator)
         {
-            get
-            {
-                var stepsArray = new[]
-                {
-                    new Step() { Value = 1, Symbol = 'I',Level=1, CanSubtract = true },
-                    new Step() { Value = 5,Level=2, Symbol = 'V'},
-                    new Step(){Value = 10,Level=3,Symbol='X',CanSubtract=true},
-                    new Step(){Value=50,Level=4,Symbol='L'},
-                    new Step(){Value = 100,Level=5,Symbol='C',CanSubtract=true},
-                    new Step(){Value=500,Level=6,Symbol='D'},
-                    new Step(){Value = 1000,Level=7,Symbol='M',CanSubtract=true},
-                };
-                return stepsArray.OrderByDescending(s => s.Level);
-            }
+            _stepsGenerator = stepsGenerator;
         }
         public string GetRomanValue(int number, int startingLevel = 0, string accumulatedString = "")
         {
             CheckForNegativeValues(number);
-            var usingSteps = startingLevel == 0 ? Steps : Steps.Where(s => s.Level < startingLevel);
-            foreach (var step in usingSteps)
+            CheckForBigValues(number);
+            var usableSteps = _stepsGenerator.GetUsableSteps(startingLevel);
+            foreach (var step in usableSteps)
             {
 
                 var remainder = number % step.Value;
@@ -37,7 +26,7 @@ namespace KataRomanNumerals.Library
                     continue;
                 string romanValue = accumulatedString;
                 //if the number is less than the step value but it is not a step itself
-                if (quotient == 0 && !Steps.Select(s => s.Value).Contains(remainder))
+                if (quotient == 0 && !_stepsGenerator.Contains(remainder))
                 {
                     var value= GetRomanValueForSmallerNumbers(number, accumulatedString, step, remainder);
                     if (!String.IsNullOrEmpty(value))
@@ -54,15 +43,21 @@ namespace KataRomanNumerals.Library
             throw new NotSupportedException();
         }
 
+        private void CheckForBigValues(int number)
+        {
+            //if (_stepsGenerator.IsNumberToLarge(number))
+            //    throw new ArgumentOutOfRangeException("Number",number,"");
+        }
+
         private string GetRomanValueForSmallerNumbers(int number, string accumulatedString, Step step, int remainder)
         {
-            var subtractables = Steps.Where(s => IsSubtractableForLevel(s, step.Level));
-            if (subtractables.Any())
+            var subtractables = _stepsGenerator.GetSubtractablesForLevel(step.Level);
+            if (subtractables != null && subtractables.Any())
             {
                 var firstSubtractor = subtractables.First();
                 if ((firstSubtractor.Value + remainder) == step.Value)
                     return accumulatedString + firstSubtractor.Symbol.ToString() + step.Symbol.ToString();
-                else if ((step.Value - firstSubtractor.Value) < number)
+                if ((step.Value - firstSubtractor.Value) < number)
                 {
 
                     return GetRomanValue(number - (step.Value - firstSubtractor.Value), step.Level, firstSubtractor.Symbol.ToString() + step.Symbol.ToString());
@@ -76,13 +71,13 @@ namespace KataRomanNumerals.Library
             if (quotient <= 3)
                 romanValue += new string(step.Symbol, quotient);
             else if (!step.CanSubtract)
-                romanValue = Steps.FirstOrDefault(s => s.Value < step.Value).Symbol.ToString() + romanValue;
+                romanValue = _stepsGenerator.GetNextSmallerSymbol(step)  + romanValue;
             else
             {
                 if (quotient == 4)
-                    romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level).Symbol;
+                    romanValue = accumulatedString + step.Symbol.ToString() + _stepsGenerator.GetLastLevelSymbol(step) ;
                 else
-                    romanValue = accumulatedString + step.Symbol.ToString() + Steps.LastOrDefault(s => s.Level > step.Level && s.CanSubtract).Symbol;
+                    romanValue = accumulatedString + step.Symbol.ToString() +_stepsGenerator.GetLastSubtractableLevelSymbol(step) ;
             }
             return romanValue;
         }
@@ -92,10 +87,7 @@ namespace KataRomanNumerals.Library
             return !step.CanSubtract && remainder > 3;
         }
 
-        private bool IsSubtractableForLevel(Step step, int level)
-        {
-            return step.CanSubtract && step.Level < level;
-        }
+        
 
         private void CheckForNegativeValues(int number)
         {
